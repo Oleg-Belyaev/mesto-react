@@ -60,8 +60,8 @@ function Main (props) {
         </button>
       </section>
       <section className="elements content__section content__section_has_indent">
-        {cards.map((card, i) => {
-        return <Card {...card} key={i} onCardClick={props.onCardClick}/>
+        {cards.map((card) => {
+        return <Card {...card} key={card._id} onCardClick={props.onCardClick}/>
         }
         )}
       </section>
