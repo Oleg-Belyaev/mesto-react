@@ -68,3 +68,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Проект: Место
+----------------------
+Проект создан для хранения пользователем различных фото. 
+Пользователю можно ввести свои данные для создания профиля.
+Фото можно добавлять, удалять и открывать в отдельном окне. Также можно отмечать поравившиеся фото.
+------------------------
+В прокте использована технология **grid**, сайт адаптирован __для раздичных устройств__. 
+В пропекте использован язык программирования **Javascript**.
+Проект создан с использованием библиотеки **React**.
