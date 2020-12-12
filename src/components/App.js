@@ -2,15 +2,14 @@ import React from 'react';
 import Header from './Header.js';
 import Main from './Main.js';
 import Footer from './Footer.js';
-import PopupWithForm from './PopupWithForm.js';
 import ImagePopup from './ImagePopup.js';
-import '../index.css';
 import api from '../utils/api.js';
 import {CurrentUserContext} from '../contexts/CurrentUserContext';
 import EditProfilePopup from './EditProfilePopup';
 import EditAvatarPopup from './EditAvatarPopup';
 import AddPlacePopup from './AddPlacePopup';
 import DeletePlacePopup from './DeletePlacePopup.js';
+import '../index.css';
 
 function App() {
 
@@ -40,7 +39,7 @@ function App() {
     setSelectedCard(card);
   }
 
-  function handleUpdateUser (userData) {
+  function handleUpdateUser(userData) {
     setIsLoading(true);
     api.editUserInfo(userData)
     .then((data) => {
@@ -55,7 +54,7 @@ function App() {
     });
   }
 
-  function handleUpdateAvatar (avatar) {
+  function handleUpdateAvatar(avatar) {
     setIsLoading(true);
     api.editAvatar(avatar)
     .then((data) => {
