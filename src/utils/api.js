@@ -53,21 +53,21 @@ class Api {
     })  
     .then(handleOriginalResponse)
   }
-
-  addLike(id) {
-    return fetch(`${this._url}/cards/likes/${id}`, {
+  
+  changeLikeCardStatus(id, isLiked) {
+    if (isLiked) {
+      return fetch(`${this._url}/cards/likes/${id}`, {
       method: 'PUT',
       headers: this._headers,
-    })  
+      })  
     .then(handleOriginalResponse)
-  }
-
-  removeLike(id) {
+    } else {
     return fetch(`${this._url}/cards/likes/${id}`, {
-      method: 'DELETE',
-      headers: this._headers,
+    method: 'DELETE',
+    headers: this._headers,
     })  
     .then(handleOriginalResponse)
+    }
   }
 
   editAvatar(data) {
@@ -75,7 +75,7 @@ class Api {
       method: 'PATCH',
       headers: this._headers,
       body: JSON.stringify({
-        avatar: data.link
+        avatar: data.avatar
       })
     })  
     .then(handleOriginalResponse)
